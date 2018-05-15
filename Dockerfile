@@ -1,4 +1,5 @@
-FROM golang:1.4.2-onbuild
+#FROM golang:1.4.2-onbuild
+FROM golang:1.8
 
 RUN mkdir -p /app
 
