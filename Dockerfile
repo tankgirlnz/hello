@@ -4,7 +4,7 @@ RUN mkdir -p /app
 
 WORKDIR /app
 
-ADD app/app app
+ADD app/app.go app.go
 
 RUN go build ./app.go
 
