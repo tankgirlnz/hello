@@ -23,7 +23,7 @@ phases:
       - echo Build started on `date`
       - echo Getting packages
       - echo Compiling the Go code...
-      - go build main.go
+      - go build app.go
   post_build:
     commands:
       - echo Build completed on `date`
