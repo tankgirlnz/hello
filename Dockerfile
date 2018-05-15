@@ -8,4 +8,6 @@ ADD app.sh app.sh
 
 RUN chmod +x app.sh 
 
+EXPOSE 8045
+
 CMD ["./app.sh"]
