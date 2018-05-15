@@ -22,6 +22,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Getting packages
+      - go get -u github.com/DeanThompson/ginpprof
+      - go get -u github.com/gin-contrib/cors
+      - go get -u github.com/gin-gonic/contrib/gzip
+      - go get -u github.com/gin-gonic/gin
       - echo Compiling the Go code...
       - go build -o app.sh
   post_build:
