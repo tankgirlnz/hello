@@ -4,8 +4,8 @@ RUN mkdir -p /app
 
 WORKDIR /app
 
-ADD app/app.go app.go
+ADD app/app.sh app.sh
 
-RUN go build ./app.go
+RUN chmod +x app.sh; 
 
-CMD ["./app"]
+CMD ["./app.sh"]
