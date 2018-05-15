@@ -4,8 +4,8 @@ RUN mkdir -p /app
 
 WORKDIR /app
 
-ADD /app/app.sh app.sh
+ADD app.sh app.sh
 
-RUN chmod +x app.sh; 
+RUN chmod +x app.sh 
 
 CMD ["./app.sh"]
