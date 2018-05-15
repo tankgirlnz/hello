@@ -1,0 +1,33 @@
+version: 0.1
+            
+phases:
+
+  install: 
+    commands:
+      - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
+      - echo GOPATH - $GOPATH
+      - echo GOROOT - $GOROOT
+      - go get -u github.com/golang/lint/golint
+
+  pre_build: 
+    commands:
+
+      # Ensure code passes all lint tests
+      - golint -set_exit_status
+
+      # Run all tests included with our application
+      #- go test
+
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Getting packages
+      - echo Compiling the Go code...
+      - go build main.go
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - app
+    - Dockerfile
