@@ -5,7 +5,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Go code...
-      - go build -o hello.go app.sh
+      - go build -o app.sh hello.go 
   post_build:
     commands:
       - echo Build completed on `date`
