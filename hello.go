@@ -1,22 +1,23 @@
 package main
 
 import (
-	"github.com/gin-gonic/contrib/gzip"
-	"github.com/gin-gonic/gin"
+	"fmt"
 )
 
 func main() {
 
-	gin.SetMode(gin.ReleaseMode)
-	router := gin.New()
-	router.Use(gin.Logger())
-	router.Use(gin.Recovery())
-	router.Use(gzip.Gzip(gzip.DefaultCompression))
-	//router.Use(cors.Default())
+	fmt.Println("here we go!!!!")
 
-	router.GET("/ping", func(ginContext *gin.Context) {
-		ginContext.String(200, "pong")
-	})
+	// gin.SetMode(gin.ReleaseMode)
+	// router := gin.New()
+	// router.Use(gin.Logger())
+	// router.Use(gin.Recovery())
+	// router.Use(gzip.Gzip(gzip.DefaultCompression))
+	// //router.Use(cors.Default())
+
+	// router.GET("/ping", func(ginContext *gin.Context) {
+	// 	ginContext.String(200, "pong")
+	// })
 
 }
 
