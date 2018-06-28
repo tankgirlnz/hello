@@ -5,13 +5,13 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Compiling the Go code...
-      - go build hello.go 
+      - go build hello.go -o app.sh
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - hello
+    - app.sh
 
 
 # version: 0.1

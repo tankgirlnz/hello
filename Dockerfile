@@ -1,11 +1,16 @@
 #FROM golang:1.4.2-onbuild
 FROM golang:1.8
 
-RUN mkdir -p /app
+RUN mkdir -p /hello
 
-WORKDIR /app
+WORKDIR /hello
 
-ADD app.sh app.sh
+# ADD app.sh app.sh
+ADD . .
+
+RUN go get github.com/gin-gonic/contrib/gzip
+
+RUN go build -o app.sh hello.go
 
 RUN chmod +x app.sh 
 
